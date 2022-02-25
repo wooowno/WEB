@@ -1,0 +1,13 @@
+<?php
+$a = 13;
+echo nl2br("variable a = $a\n");
+
+$b = 13.2;
+echo nl2br("variable b = $b\n");
+
+echo nl2br(($a-1)."\n");
+
+$last_month = 1187.23;
+$this_month = 1089.98;
+echo nl2br("difference = ".($last_mont - $this_month)."\n");
+?>
