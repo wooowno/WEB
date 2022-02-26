@@ -1,0 +1,11 @@
+<?php
+//a)
+$str = "ahb acb aeb aeeb adcb axeb";
+$stencil = "/a..b/";
+echo nl2br(preg_match($stencil, $str)."\n");
+
+//b)
+$stencil = "/(\d)+/";
+$str = "a1b2c3";
+echo preg_replace_callback($stencil, fn($matches) => intval($matches[0]) ** 2, $str);
+?>
