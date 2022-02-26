@@ -1,0 +1,81 @@
+<?php
+$a = 10;
+$b = 3;
+echo nl2br(($a % $b)."\n");
+
+if (($a % $b) == 0)
+  echo nl2br("Делится. ".($a / $b)."\n");
+else
+  echo nl2br("Делится с остатком. ".($a % $b)."\n");
+  
+$st = pow(2, 10);
+$sqrt245 = sqrt(245);
+$arr = [4, 2, 5, 19, 13, 0, 10];
+$sum = 0;
+
+foreach ($arr as $ar)
+  $sum += pow($ar, 2);
+  
+$sum = sqrt($sum);
+echo nl2br("st = $st, sqrt245 = $sqrt245, sum = $sum\n");
+
+$sqrt379 = sqrt(379);
+echo nl2br("1. ".round($sqrt379).";\n2. ".round($sqrt379, 1).";\n3. ".round($sqrt379, 2).";\n");
+
+$sqrt587 = sqrt(587);
+echo nl2br("more ".ceil($sqrt587)." less ".floor($sqrt587)."\n");
+
+$mass = [4, -2, 5, 19, -130, 0, 10];
+echo nl2br("max ".max($mass)."; min ".min($mass)."\n");
+
+echo nl2br("random[1, 100]: ".rand(1, 100)."\n");
+
+$mass = [];
+for ($i = 0; $i < 10; $i++)
+{
+  $mass[$i] = rand();
+  echo " $mass[$i]";
+}
+echo nl2br("\n");
+
+for ($a = 10; $a < 13: $a++)
+  for ($b = 1; $b > -1; $b--)
+    echo nl2br("|a - b| = ".abs($a - $b)."\n");
+    
+$mass = [1, 2, -1, -2, 3, -3];
+foreach ($mass as $i => $el)
+{
+  $mass[$i] = abs($mass[$i]);
+  echo "mass[$i] = $mass[$i],  ";
+}
+echo nl2br("\n");
+
+$n = 30;
+$mass = [];
+for ($i = 1; $i**2 <= $n; $i++)
+{
+  if ($n % $i == 0)
+  {
+    $mass[] = $i;
+    echo "$i,  ";
+    if ($n / $i != $i)
+    {
+      $mass[] = $n / $i;
+      echo ($n / $i).",  ";
+    }
+  }
+}
+echo nl2br("\n");
+
+$mass = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$sum = 0;
+foreach ($mass as $i => $el)
+{
+  $sum += $el;
+  if ($sum > 10)
+  {
+    echo nl2br("answer: ".($i+1)."\n");
+    break;
+  }
+}
+?>
