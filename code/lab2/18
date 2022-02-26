@@ -1,0 +1,28 @@
+<?php
+function moreThenTen($a, $b)
+{
+	return ($a + $b) > 10 ? True: False;
+}
+
+function equal($a, $b)
+{
+	return $a == $b ? True: False;
+}
+
+$test = 0;
+echo $test == 0 ? "верно": "";
+
+$age = 34;
+if ($age < 10)
+	echo nl2br("Age less than 10\n");
+else if ($age > 99)
+	echo nl2br("Age more than 99\n");
+else 
+{
+	$digSum = $age / 10 + $age % 10;
+    echo nl2br("Sum of digits is ".($digSum <= 9 ? "one digit":"two digits")."\n");
+}
+
+$arr = [1, 3, 4, 5];
+echo count($arr) == 3 ? array_sum($arr):'';
+?>
