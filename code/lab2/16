@@ -1,0 +1,47 @@
+<?php
+function increaseEnthusiasm(string $str)
+{
+  return $str."!";
+}
+
+echo nl2br(increaseEnthusiasm("I'm the best")."\n");
+
+function repeatThreeTimes(string $str)
+{
+  return $str.$str.$str;
+}
+
+echo nl2br(repeatThreeTimes("Yeah! ")."\n");
+
+echo nl2br(increaseEnthusiasm(repeatThreeTimes("ho"))."\n");
+
+function cut(string $str, int $num = 10)
+{
+  $end = min(strlen($str), $num);
+  $get = "";
+  for ($i = 0; $i < $end; $i++)
+  {
+    $get .= $str[$i];
+  }
+  return $get;
+}
+
+function printArray(array $mass, int $i = 0)
+{
+  if ($i == count($mass))
+    return;
+  echo "[$i]: $mass[$i] ";
+  printArray($mass, $i + 1);
+}
+
+function notAddition(string $num)
+{
+	$sum = 0;
+  for($i = 0; $i < strlen($num); $i++)
+    $sum += intval($num[$i]);
+	if ($sum > 9)
+    notAddition($sum);
+  else
+    return $sum;
+}
+?>
