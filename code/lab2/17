@@ -44,5 +44,28 @@ for ($i = 0; $i < 3; $i++)
   $mass[] = $smass;
   echo printArray($smass).", ";
 }
-echo "]";
+echo nl2br("]\n");
+
+$mass = [2, 5, 3, 9];
+$result = $mass[0] * $mass[1] + $mass[2] * $mass[3];
+echo nl2br("result = $result\n");
+
+$user = [
+	"name" => "Kristina",
+	"surname" => "Saveleva",
+	"patronymic" => "Artemovna"
+]
+echo nl2br($user['surname']." ".$user['name']." ".$user['patronymic']."\n");
+
+$date = [
+	"year" => 2022,
+	"month" => 02,
+	"day" => 26
+];
+echo nl2br($date["year"]."-".$date["month"]."-".$date["day"]."\n");
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo nl2br("size = ".count($arr)."\n");
+echo nl2br("last = ".$arr[count($arr)-1]."\n");
+echo nl2br("penultimate = ".$arr[count($arr)-2]."\n");
 ?>
