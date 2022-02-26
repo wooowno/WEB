@@ -1,0 +1,10 @@
+<?php
+function printStringReturnNumber()
+{
+  echo nl2br("print go brrr\n");
+  return 34;
+}
+
+$my_num = printStringReturnNumber();
+echo "my_num = $my_num";
+?>
