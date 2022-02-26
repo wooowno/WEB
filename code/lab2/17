@@ -1,0 +1,48 @@
+<?php
+function printArray($array)
+{
+  echo "[";
+  foreach ($array as $el)
+    echo "$el, ";
+  echo nl2br("]\n");
+}
+
+$size = 5;
+$mass = ["x"];
+for ($i = 0; $i < $size-1; $i++)
+{
+  $mass[$i+1] = $mass[$i]."x";
+}
+printArray($mass);
+
+function arrayFill($s, int $n)
+{
+  $mass = [];
+  for ($i = 0; $i < $n; $i++)
+    $mass[] = $s;
+  return $mass;
+}
+printArray(arrayFill("lol", 4));
+
+$mass = [[1, 2, 3], [4, 5], [6]];
+$sum = 0;
+foreach ($mass as $smass)
+	$sum += array_sum($smass);
+echo $sum;
+
+$m = 1;
+$mass = [];
+echo "[";
+for ($i = 0; $i < 3; $i++)
+{
+  $smass = [];
+  for ($j = 0; $j < 3; $j++)
+  {
+    $smass[] = $m;
+    $m++;
+  }
+  $mass[] = $smass;
+  echo printArray($smass).", ";
+}
+echo "]";
+?>
